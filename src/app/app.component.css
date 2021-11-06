@@ -1,0 +1,73 @@
+.menuitems a
+{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-window{
+    
+    max-width: 750px;
+    min-width: 650px;
+    font-size: 10px;;
+    font-weight: bold;
+}
+
+.login-window input{
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.rightcontent,.leftcontent {  
+  background-color: white;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.leftcontent{
+    background-color:#e5f4ea ; 
+}
+
+
+.btn{
+    margin: 30px;
+}
+
+
+#main{
+    transition:0.5s ;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
