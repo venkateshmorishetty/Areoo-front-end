@@ -8,6 +8,7 @@
   top: 20px;
   left: 20px;
   color:#4fb372;
+ 
 }
 
 .form .fa-microphone {
@@ -33,7 +34,7 @@
 .form-input {
   height: 55px;;
   text-indent: 33px;
-  border-radius: 10px;
+  border-radius: 40px;
   background-color: #e5f4ea;
   
 }
@@ -41,4 +42,33 @@
 .form-control::placeholder{
   color: #57b679;
 }
+
+
+.categoryButton{
+  background-color: white;
+  color: #4fb372;
+  border: 2px solid #cae7d3;
+  border-radius: 15px;
+  font-size: 15px;
+  height: 40px;
+  width: auto;
+  display:inline-block;
+  margin: 20px;
+}
+
+.categoryButton:hover{
+  background-color: #4fb372;
+  color: white;
+}
+
+.categoriesScroll::-webkit-scrollbar {
+  display: none;
+}
+.categoriesScroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
 

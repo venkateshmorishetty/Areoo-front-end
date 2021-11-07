@@ -5,33 +5,17 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item menuitems">
-        <a class=" nav-link" href="#">Home </a>
-      </li>
-      <li class="nav-item menuitems">
-        <a class=" nav-link" href="#">Contact</a>
-      </li>
-      <li class="nav-item menuitems">
-        <a class=" nav-link" href="#">FAQs</a>
-      </li>
-      <li class="nav-item menuitems">
-        <a class=" nav-link" href="#">Terms & Conditions</a>
+    
+    <ul class = "ml-auto joinbutton">
+      <li style="list-style-type: none;">
+          <a *ngIf = "userUnAuthenticated; else profileContent" class=" nav-link" href="#" (click)="open(content)">JOIN NOW</a>
+          <ng-template #profileContent >
+            <span style="font-size:30px;cursor:pointer; margin-right: 30px;" (click)="openNav()">&#9776;</span>
+          </ng-template>
       </li>
     </ul>
-    <span class="navbar-right menuitems">
-      
-      <a *ngIf = "userUnAuthenticated; else profileContent" class=" nav-link" href="#" (click)="open(content)">JOIN NOW</a>
-      <ng-template #profileContent >
-        <span style="font-size:30px;cursor:pointer; margin-right: 30px;" (click)="openNav()">&#9776;</span>
-      </ng-template>
-    </span>
   </div>
 </nav>
-
-
-
-
 <ng-template #content let-modal>
   <div class="login-window container" id="myModal">
    
@@ -67,10 +51,6 @@
   
 </ng-template>
 
-<app-home></app-home>
-
-</div>
-
 
 <div id="mySidenav" class=" sidenav" >
   <a href="javascript:void(0)" class="closebtn" (click) = "closeSideNav()" >&times;</a>
@@ -83,6 +63,11 @@
   <a href="#">Notification</a>
   <a href="#">Create Afiliate Link</a>
   <a href="#">Logout</a>
+</div>
+
+<app-home></app-home>
+
+
 </div>
 
 

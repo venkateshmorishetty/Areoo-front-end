@@ -1,0 +1,27 @@
+[
+    {
+        "name":"amazon",
+        "image":"./assets/partners/amazon.png",
+        "cashback":"Upto 7.5% cashback"
+    },
+    {
+        "name":"flipkart",
+        "image":"./assets/partners/flipkart.png",
+        "cashback":"Upto 10% cashback"
+    },
+    {
+        "name":"myntra",
+        "image":"./assets/partners/myntra.jpg",
+        "cashback":"Upto 5% cashback"
+    },
+    {
+        "name":"flipkart",
+        "image":"./assets/partners/flipkart.png",
+        "cashback":"Upto 10% cashback"
+    },
+    {
+        "name":"shopclues",
+        "image":"./assets/partners/Shopclues.png",
+        "cashback":"Upto 10% cashback"
+    }
+]

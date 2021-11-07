@@ -1,12 +1,29 @@
 <div class="jumbotron jumbotron-fluid" style="background-color: #e5f4ea; padding-top: 0%; padding-bottom: 0%;">
     <div class="text-center">
-        <img src="./assets/homepage.PNG"  alt="" style="height: 250px;">
+        <img src="./assets/unauthenticated-homepage.PNG"  alt="" style="height: 250px;">
       
     </div>
-    
-  </div>
-  <div class="row height d-flex justify-content-center align-items-center">
+</div>
+<div class="row height d-flex justify-content-center align-items-center">
     <div class="col-md-6">
         <div class="form"> <i class="fa fa-search"></i> <input type="text" class="form-control form-input" placeholder="Search for Products"> <span class="left-pan"><i class="fa fa-microphone"></i></span> </div>
     </div>
 </div>
+
+
+
+<!-- <div *ngFor="let data of marketPlaceData" >
+<div class="card" style="width: 18rem;">
+    <img src="{{data.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{data.cashback}}</p>
+    </div>
+  </div>
+</div>  -->
+
+<div class =" container-fluid">
+<div class="categoriesScroll" style="overflow: auto; white-space: nowrap; ">
+    <button *ngFor="let category of  categoriesData" class="categoryButton" >{{category.name}}</button>
+</div>
+</div>
+

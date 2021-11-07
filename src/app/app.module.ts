@@ -9,17 +9,23 @@ import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
