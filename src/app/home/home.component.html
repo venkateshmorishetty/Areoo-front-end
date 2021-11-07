@@ -1,29 +1,38 @@
+<div class =" container-fluid" style=" margin:0; padding:0">
 <div class="jumbotron jumbotron-fluid" style="background-color: #e5f4ea; padding-top: 0%; padding-bottom: 0%;">
     <div class="text-center">
         <img src="./assets/unauthenticated-homepage.PNG"  alt="" style="height: 250px;">
       
     </div>
 </div>
-<div class="row height d-flex justify-content-center align-items-center">
+<div class="row  d-flex justify-content-center align-items-center">
     <div class="col-md-6">
         <div class="form"> <i class="fa fa-search"></i> <input type="text" class="form-control form-input" placeholder="Search for Products"> <span class="left-pan"><i class="fa fa-microphone"></i></span> </div>
     </div>
 </div>
 
-
-
-<!-- <div *ngFor="let data of marketPlaceData" >
-<div class="card" style="width: 18rem;">
-    <img src="{{data.image}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">{{data.cashback}}</p>
-    </div>
-  </div>
-</div>  -->
-
-<div class =" container-fluid">
 <div class="categoriesScroll" style="overflow: auto; white-space: nowrap; ">
     <button *ngFor="let category of  categoriesData" class="categoryButton" >{{category.name}}</button>
 </div>
+
+
+<div *ngFor="let data of marketPlaceData" >
+    <div class="categoryHeader" style="margin-left: 20px">
+        <h4 style="color:#4fb372 ; font-weight: normal;">{{data.category_name}}</h4>
+    </div>
+    <div class="row">
+        <div *ngFor="let offer of data.category_offers" class="col-sm-6 col-lg-3"  >
+            <div class="card" style="text-align:center; width:10em; margin-left: auto;margin-right: auto; margin-top: 30px;border-radius: 20px;">
+                <img src="{{offer.image}}" class="card-img-top" alt="brand image" >
+                <div class="card-body " style="border-radius:0px 0px 20px 20px; background-color: green;">
+                    <a href="#" class="card-text" style=" font-weight: bold; font-size: 10px; text-decoration: none; color: whitesmoke;">{{offer.cashback}}</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>
+
+</div> 
+
 
