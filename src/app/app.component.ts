@@ -15,6 +15,8 @@ export class AppComponent {
   title = 'areooo-front-end';
   userUnAuthenticated:boolean = true;
   displaySidenav:boolean = false;
+  opened:boolean = false;
+
   open(content:any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

@@ -1,75 +1,121 @@
-<div id="main" class =" container-fluid px-0" style=" padding-right:0;padding-left:0; margin-right:auto;margin-left:auto">
+<mat-sidenav-container>
+  <mat-sidenav position="end" [(opened)]="opened">
+    <div class="container-fluid" style="background-color: #2aa65a; height: 10%; color:white; font-weight: bold;">
 
- <!-- for navigation bar -->
-
-<nav class="navbar navbar-expand row" style="background-color: #e5f4ea;">
-  <a class="navbar-brand" href="#"><img src="../assets/logo.PNG" alt="areooo logo"></a>
-  
-  <div class="collapse navbar-collapse">
-    <ul class = "ml-auto joinbutton">
-      <li style="list-style-type: none;">
-          <a *ngIf = "userUnAuthenticated; else profileContent" class=" nav-link" href="#" (click)="open(content)">JOIN NOW</a>
-          <ng-template #profileContent >
-            <span style="font-size:30px;cursor:pointer; " (click)="openNav()"><img src="../assets/navbarIcon.PNG" alt=""></span>
-          </ng-template>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<ng-template #content let-modal>
-  <div class="login-window container" id="myModal">
-   
-    <div class ="row" >
-      <div class="col-md-5 left leftcontent">
-        <img src="../assets/logo.PNG" alt="logo">
-      </div>
-      <div class="col-md-7 rightcontent" >
-        <button class="close" style="top: 10px; right: 10px; position: absolute;" (click)="modal.dismiss('Cross click')">X</button>
-        
-        <form *ngIf="logincontent; else signUpcontent;" #loginForm="ngForm" (ngSubmit) = "login(loginForm)">
-          <label for="email">User Name</label><div class="form-group"> <input type="email" class="form-control"  name="username" placeholder="Enter email" ngModel> </div>  
-          <div class="form-group"> <label for="pwd">Password</label> <input type="password" class="form-control"  name = "pwd" placeholder="Enter password" ngModel> </div>  
-          <div class="checkbox"> <label><input type="checkbox"> Remember me</label> </div> 
-          <button class="btn btn-primary" type="submit">Login</button> 
-          
-        </form>
-        <ng-template #signUpcontent>
-          <form >
-            <div class="form-group"> <label for="name">Full Name</label> <input type="text" class="form-control" id="name" placeholder="Full name" required> </div>  
-            <div class="form-group"> <label for="phonenumber">Mobile Number</label> <input type="number" class="form-control" id="number" placeholder="Mobile" required> </div>  
-            <div class="form-group"> <label for="email">Email</label> <input type="email" class="form-control" id="email" placeholder="Enter email"> </div>  
-            <div class="form-group"> <label for="pwd">Password</label> <input type="password" class="form-control" id="pwd" placeholder="Enter password"> </div>  
-            <div class="form-group"> <label for="pwd">Re-Enter Password</label> <input type="password" class="form-control" id="pwd" placeholder="Confirm Password"> </div>  
-            <div class="checkbox"> <label><input type="checkbox">I agree on Terms & Conditions</label> </div>  
-            <button type="submit" class="btn btn-primary">Create Account</button>
-        </form>
-      </ng-template>
-      </div> 
+        <table style="margin: auto;text-align: center; ">
+          <tbody>
+          <tr>
+            <td >
+              <p>My Account</p>
+              <h3>Venkatesh</h3> 
+            </td>
+            <td >
+              <img src="../assets/profile.jpg" alt="" style="border-radius: 10px; width: 100px; height: 100px;">
+            </td>
+          </tr>
+          </tbody>
+        </table>
     </div>
-  
-  </div>
-  
-</ng-template>
+    <mat-divider></mat-divider>
+   <button mat-button class="menu-button">
+      <span>My Orders</span>
+   </button>
+   <button mat-button class="menu-button">
+      <span>Withdraw</span>
+    </button>
+    
+    <button mat-button class="menu-button">
+      <span>Support</span>
+    </button>
+    <button mat-button class="menu-button">
+      <span>Settings</span>
+    </button>
+    <button mat-button class="menu-button">
+      <span>Notifications</span>
+    </button>
+    <button mat-button class="menu-button">
+      <span>Create Affiliate Link</span>
+    </button>
+    <button mat-button class="menu-button">
+      <span>Logout</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content  >
+    <div class =" container-fluid" id="main" style=" padding-right:0;padding-left:0; margin-right:auto;margin-left:auto">
+
+  <!-- for navigation bar -->
+
+    <nav class="navbar navbar-expand row" style="background-color: #e5f4ea;">
+      <a class="navbar-brand" href="#"><img src="../assets/logo.PNG" alt="areooo logo"></a>
+      
+      <div class="collapse navbar-collapse">
+        <ul class = "ml-auto joinbutton">
+          <li style="list-style-type: none;">
+              <a *ngIf = "userUnAuthenticated; else profileContent" class=" nav-link" href="#" (click)="open(content)">JOIN NOW</a>
+              <ng-template #profileContent >
+                <span style="font-size:30px;cursor:pointer; " (click)="opened=!opened"><img src="../assets/navbarIcon.PNG" alt=""></span>
+              </ng-template>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <ng-template #content let-modal>
+      <div class="login-window container" id="myModal">
+      
+        <div class ="row" >
+          <div class="col-md-5 col-lg-5 col-5 left leftcontent">
+            <img src="../assets/logo.PNG" alt="logo">
+          </div>
+          <div class="col-md-7 col-lg-7 col-7 rightcontent" >
+            <button class="close" style="top: 10px; right: 10px; position: absolute;" (click)="modal.dismiss('Cross click')">X</button>
+            
+            <form *ngIf="logincontent; else signUpcontent;" #loginForm="ngForm" (ngSubmit) = "login(loginForm)">
+              <label for="email">User Name</label><div class="form-group"> <input type="email" class="form-control"  name="username" placeholder="Enter email" ngModel> </div>  
+              <div class="form-group"> <label for="pwd">Password</label> <input type="password" class="form-control"  name = "pwd" placeholder="Enter password" ngModel> </div>  
+              <div class="checkbox"> <label><input type="checkbox"> Remember me</label> </div> 
+              <button class="btn btn-primary" type="submit">Login</button> 
+              
+            </form>
+            <ng-template #signUpcontent>
+              <form >
+                <div class="form-group"> <label for="name">Full Name</label> <input type="text" class="form-control" id="name" placeholder="Full name" required> </div>  
+                <div class="form-group"> <label for="phonenumber">Mobile Number</label> <input type="number" class="form-control" id="number" placeholder="Mobile" required> </div>  
+                <div class="form-group"> <label for="email">Email</label> <input type="email" class="form-control" id="email" placeholder="Enter email"> </div>  
+                <div class="form-group"> <label for="pwd">Password</label> <input type="password" class="form-control" id="pwd" placeholder="Enter password"> </div>  
+                <div class="form-group"> <label for="pwd">Re-Enter Password</label> <input type="password" class="form-control" id="pwd" placeholder="Confirm Password"> </div>  
+                <div class="checkbox"> <label><input type="checkbox">I agree on Terms & Conditions</label> </div>  
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+          </ng-template>
+          </div> 
+        </div>
+      
+      </div>
+      
+    </ng-template>
 
 
-<div id="mySidenav" class=" sidenav" >
-  <a href="javascript:void(0)" class="closebtn" (click) = "closeSideNav()" >&times;</a>
-  <a href="#">My Account</a>
-  <a href="#">MY Orders</a>
-  <a href="#">Withdraw</a>
-  <a href="#">Support</a>
-  <a href="#">Settings</a>
-  <a href="#">Security</a>
-  <a href="#">Notification</a>
-  <a href="#">Create Afiliate Link</a>
-  <a href="#">Logout</a>
-</div>
+    <div id="mySidenav" class=" sidenav" >
+      <a href="javascript:void(0)" class="closebtn" (click) = "closeSideNav()" >&times;</a>
+      <a href="#">My Account</a>
+      <a href="#">MY Orders</a>
+      <a href="#">Withdraw</a>
+      <a href="#">Support</a>
+      <a href="#">Settings</a>
+      <a href="#">Security</a>
+      <a href="#">Notification</a>
+      <a href="#">Create Afiliate Link</a>
+      <a href="#">Logout</a>
+    </div>
 
-<app-home></app-home>
+    <app-home></app-home>
 
+    <app-footer></app-footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-</div>
 
 
 

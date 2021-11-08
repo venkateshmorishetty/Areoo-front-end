@@ -5,14 +5,38 @@
   border-radius: 20px;
 }
 
+.mat-sidenav{
+  height: auto;
+  background-color:#fafaf7;
+  width: 80%;
+  text-align: center;
+}
+
+.menu-button{
+  background-color:#fafaf7;
+  height: 3%;
+  border-top: 1px solid #4fb372;
+  border-radius: 0px;;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: green;
+  padding-left: 10%;
+}
+.menu-button:hover{
+  background-color: #4fb372;
+  color: white;
+}
+
 .menuitems{
   float: right;
 }
 
 .login-window{
     
-    max-width: 750px;
-    min-width: 650px;
+    /* max-width: 750px;
+    min-width: 650px; */
     font-size: 10px;;
     font-weight: bold;
 }
