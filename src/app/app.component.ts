@@ -51,16 +51,16 @@ export class AppComponent {
   }
 
   openNav(){
-    const main = document.getElementById("main");
-    if (main) { main.style.marginLeft = "20%";}
+    // const main = document.getElementById("main");
+    // if (main) { main.style.marginLeft = "20%";}
     const navbar  = document.getElementById("mySidenav");
     if (navbar) {navbar.style.width = "20%";}
     console.log("opening side navbar")
   }
 
   closeSideNav(){
-    const main = document.getElementById("main");
-    if (main) { main.style.marginLeft = "0%";}
+    // const main = document.getElementById("main");
+    // if (main) { main.style.marginLeft = "0%";}
     const navbar  = document.getElementById("mySidenav");
     if (navbar) {navbar.style.width = "0%";}
     console.log("closing side navbar")

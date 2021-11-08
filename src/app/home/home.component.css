@@ -31,6 +31,10 @@
   padding-left: 10px
 }
 
+/* .row{
+  padding: 0px;;
+} */
+
 .form-input {
   height: 55px;;
   text-indent: 33px;
@@ -71,5 +75,10 @@
 
 
 
-
+#imageContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 

@@ -1,21 +1,22 @@
-<div id="main">
-<nav class="navbar navbar-expand-sm" style="background-color: #e5f4ea;">
+<div id="main" class =" container-fluid px-0" style=" padding-right:0;padding-left:0; margin-right:auto;margin-left:auto">
+
+ <!-- for navigation bar -->
+
+<nav class="navbar navbar-expand row" style="background-color: #e5f4ea;">
   <a class="navbar-brand" href="#"><img src="../assets/logo.PNG" alt="areooo logo"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    
+  
+  <div class="collapse navbar-collapse">
     <ul class = "ml-auto joinbutton">
       <li style="list-style-type: none;">
           <a *ngIf = "userUnAuthenticated; else profileContent" class=" nav-link" href="#" (click)="open(content)">JOIN NOW</a>
           <ng-template #profileContent >
-            <span style="font-size:30px;cursor:pointer; margin-right: 30px;" (click)="openNav()">&#9776;</span>
+            <span style="font-size:30px;cursor:pointer; " (click)="openNav()"><img src="../assets/navbarIcon.PNG" alt=""></span>
           </ng-template>
       </li>
     </ul>
   </div>
 </nav>
+
 <ng-template #content let-modal>
   <div class="login-window container" id="myModal">
    
