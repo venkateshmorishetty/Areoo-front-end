@@ -1,22 +1,10 @@
 <mat-sidenav-container>
   <mat-sidenav position="end" [(opened)]="opened">
-    <div class="container-fluid" style="background-color: #2aa65a; height: 10%; color:white; font-weight: bold;">
-
-        <table style="margin: auto;text-align: center; ">
-          <tbody>
-          <tr>
-            <td >
-              <p>My Account</p>
-              <h3>Venkatesh</h3> 
-            </td>
-            <td >
-              <img src="../assets/profile.jpg" alt="" style="border-radius: 10px; width: 100px; height: 100px;">
-            </td>
-          </tr>
-          </tbody>
-        </table>
+    <div class="logo-nav" >
+      <img src="../assets/profile.jpg" alt="" >
+      <h1>Venkatesh</h1>
     </div>
-    <mat-divider></mat-divider>
+   
    <button mat-button class="menu-button">
       <span>My Orders</span>
    </button>
@@ -41,7 +29,6 @@
     </button>
   </mat-sidenav>
   <mat-sidenav-content  >
-    <div class =" container-fluid" id="main" style=" padding-right:0;padding-left:0; margin-right:auto;margin-left:auto">
 
   <!-- for navigation bar -->
 
@@ -95,24 +82,12 @@
       
     </ng-template>
 
-
-    <div id="mySidenav" class=" sidenav" >
-      <a href="javascript:void(0)" class="closebtn" (click) = "closeSideNav()" >&times;</a>
-      <a href="#">My Account</a>
-      <a href="#">MY Orders</a>
-      <a href="#">Withdraw</a>
-      <a href="#">Support</a>
-      <a href="#">Settings</a>
-      <a href="#">Security</a>
-      <a href="#">Notification</a>
-      <a href="#">Create Afiliate Link</a>
-      <a href="#">Logout</a>
-    </div>
-
     <app-home></app-home>
+     
+      <app-footer></app-footer>
+    
 
-    <app-footer></app-footer>
-    </div>
+   
   </mat-sidenav-content>
 </mat-sidenav-container>
 

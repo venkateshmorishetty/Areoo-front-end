@@ -8,8 +8,21 @@
 .mat-sidenav{
   height: auto;
   background-color:#fafaf7;
-  width: 80%;
+  width: 50%;
   text-align: center;
+}
+
+.logo-nav img {
+  width: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.logo-nav h1{
+  color: whitesmoke;
+}
+.logo-nav {
+  background-color: #2aa65a;
 }
 
 .menu-button{
@@ -24,7 +37,7 @@
   color: green;
   padding-left: 10%;
 }
-.menu-button:hover{
+.menu-button:hover, .menu-button:active{
   background-color: #4fb372;
   color: white;
 }
@@ -35,8 +48,6 @@
 
 .login-window{
     
-    /* max-width: 750px;
-    min-width: 650px; */
     font-size: 10px;;
     font-weight: bold;
 }
@@ -67,35 +78,3 @@
 #main{
     transition:0.5s ;
 }
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-
-  
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }

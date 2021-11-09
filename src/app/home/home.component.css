@@ -31,9 +31,6 @@
   padding-left: 10px
 }
 
-/* .row{
-  padding: 0px;;
-} */
 
 .form-input {
   height: 55px;;
@@ -60,7 +57,7 @@
   margin: 20px;
 }
 
-.categoryButton:hover{
+.categoryButton:hover, .categoryButton:active{
   background-color: #4fb372;
   color: white;
 }

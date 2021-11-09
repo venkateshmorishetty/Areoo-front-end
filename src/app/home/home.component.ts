@@ -43,4 +43,14 @@ export class HomeComponent implements OnInit {
   }
 
 
+  public scrollToCategory(selectedCategory: any){
+
+    if(document.querySelector('#categoryHeader_'+selectedCategory)){
+      document.querySelector('#categoryHeader_'+selectedCategory)?.scrollIntoView({ behavior: 'smooth' });
+    }else{
+      alert('No items avilable for categoryHeader_'+selectedCategory)
+    }
+    
+  }
+
 }
